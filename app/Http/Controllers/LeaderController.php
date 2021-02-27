@@ -12,8 +12,9 @@ class LeaderController extends Controller
         return Leaders::all()->sortByDesc('points');
     }
 
-    public function show(Leaders $leader)
+    public function show($id)
     {
+        $leader = Leaders::find($id);
         return $leader;
     }
 
